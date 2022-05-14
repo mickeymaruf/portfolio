@@ -90,7 +90,7 @@ ul li{
 .nav--item a::after{
   content: "";
   width: 0%;
-  background: #212529;
+  background: #0DE85D;
   height: 0.1rem;
   display: block;
   margin: auto;
@@ -102,7 +102,7 @@ ul li{
 }
 
 .menu--bar{
-  position: fixed;
+  position: absolute;
   left: 3%;
   cursor: pointer;
   transition: 0.5s;
@@ -111,6 +111,10 @@ ul li{
 
 .menu--bar:active{
   transform: rotate(360deg);
+}
+
+.social--icon li a{
+  color: #212529;
 }
 
 /* nav end */
@@ -139,7 +143,7 @@ ul li{
   border-radius: 30px 30px 30px 0;
   padding: 0.6rem 1.8rem;
   border: 0;
-  background-color: rgb(2, 191, 239);
+  background-color: #0DE85D;
   color: #fff;
   font-weight: 500;
 }
@@ -319,3 +323,100 @@ ul li{
 }
 
 /* certification */
+/* service */
+
+.service h5{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.service .card-text{
+  font-size: 0.8rem;
+}
+
+/* service */
+/* skills */
+
+.skills{
+  padding: 0 20px;
+}
+
+.skill{
+  margin-top: 1.2rem;
+}
+
+.skill-name{
+  font-weight: 600;
+  margin: 0.3rem 0;
+}
+
+.skill-bar{
+  height: 14px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+
+.skill-per{
+  height: 14px;
+  background-color: #0de85d;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per--backend{
+  width: 100%;
+  margin-left: auto;
+}
+
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+}
+
+.skill-per--backend::before{
+  left: 0;
+  transform: translate(-50%);
+}
+
+.skill-per--frontend::before{
+  right: 0;
+  transform: translate(50%);
+}
+
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f1f1f1;
+  top: -15px;
+  border-radius: 2px;
+}
+
+.skill-per--backend::after{
+  left: 0;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.skill-per--frontend::after{
+  right: 0;
+  transform: translate(50%) rotate(45deg);
+}
+
+@keyframes fillBars{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+/* skills */
