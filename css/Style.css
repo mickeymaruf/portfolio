@@ -369,7 +369,6 @@ ul li{
   margin-left: auto;
 }
 
-
 .skill-per::before{
   content: attr(per);
   position: absolute;
@@ -378,11 +377,6 @@ ul li{
   border-radius: 4px;
   font-size: 12px;
   top: -35px;
-}
-
-.skill-per--backend::before{
-  left: 0;
-  transform: translate(-50%);
 }
 
 .skill-per--frontend::before{
@@ -420,3 +414,38 @@ ul li{
 }
 
 /* skills */
+
+
+/* responsive */
+
+@media only screen and (max-width: 767px){
+  .skill-per--backend{
+    width: 100%;
+    margin: 0;
+  }
+  .skill-per--backend::before{
+    right: 0;
+    transform: translate(50%);
+  }
+  .skill-per--backend::after {
+    left: 100%;
+    transform: translate(-50%) rotate(45deg);
+  }
+  .skills__parentClass{
+    margin-bottom: 2rem;
+  }
+  .skills__parentClass:last-child{
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .skill-per--backend::before{
+    left: 0;
+    transform: translate(-50%);
+  }
+  .skill-per--backend::after{
+    left: 0;
+    transform: translate(-50%) rotate(45deg);
+  }
+}
