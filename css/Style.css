@@ -112,14 +112,15 @@ body::-webkit-scrollbar-thumb{
 }
 
 .social--icon li a{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #212529;
   display: block;
+  transition: 0.3s;
 }
 
 .social--icon li a:hover{
   position: relative;
-  top: -15%;
+  transform: translateY(-5px);
 }
 
 /* nav end ####################*/
